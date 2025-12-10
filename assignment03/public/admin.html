@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hospital Triage – Admin</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <h1 class="page-title">Hospital Triage – Admin</h1>
+    <p class="page-subtitle">
+      Load the queue, select a patient, then update their priority and room as needed.
+    </p>
+
+    <section class="card">
+      <div style="display:flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+        <button id="load-btn" class="btn btn-primary">Load Data</button>
+        <span class="helper">Patients are ordered by triage level and arrival time.</span>
+      </div>
+
+      <div class="table-wrapper">
+        <table id="patients-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Injury</th>
+              <th>Pain</th>
+              <th>Priority</th>
+              <th>Room</th>
+              <th>Arrival</th>
+              <th>Select</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- rows populated by JS -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 style="font-size: 24px; margin-bottom: 12px;">Selected Patient Actions</h2>
+      <p class="helper" id="selected-info">No patient selected.</p>
+
+      <div class="actions-panel" style="margin-top: 12px;">
+        <select id="priority-select" class="form-select">
+          <option value="">Set Priority</option>
+        </select>
+
+        <select id="room-select" class="form-select">
+          <option value="">Assign Room</option>
+        </select>
+
+        <button id="update-btn" class="btn btn-primary">Update</button>
+        <button id="remove-btn" class="btn btn-secondary">Remove from Queue</button>
+      </div>
+    </section>
+
+    <div class="nav-links">
+      <a href="index.html">Back to Home</a>
+    </div>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

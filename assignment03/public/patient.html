@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hospital Triage – User</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <h1 class="page-title">Hospital Triage – User</h1>
+    <p class="page-subtitle">
+      Select your injury type and pain level so we can estimate your wait time.
+    </p>
+
+    <section class="card">
+      <form id="patient-form">
+        <div class="form-row">
+          <label for="full_name">Full Name</label>
+          <input class="form-input" id="full_name" name="full_name" required />
+        </div>
+
+        <div class="form-row">
+          <label for="card_number">3-Letter Code or Card Number (optional)</label>
+          <input class="form-input" id="card_number" name="card_number" maxlength="10" />
+          <span class="helper">Example: ABC</span>
+        </div>
+
+        <div class="form-row">
+          <label for="gender">Gender (optional)</label>
+          <select class="form-select" id="gender" name="gender">
+            <option value="">Prefer not to say</option>
+            <option>Female</option>
+            <option>Male</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label for="dob">Date of Birth (optional)</label>
+          <input type="date" class="form-input" id="dob" name="date_of_birth" />
+        </div>
+
+        <div class="form-row">
+          <label>Injury Type</label>
+          <div class="injury-grid" id="injury-grid">
+            <!-- buttons created by JS OR hard-code -->
+            <button type="button" class="btn btn-secondary injury-btn" data-injury="Head">Head</button>
+            <button type="button" class="btn btn-secondary injury-btn" data-injury="Heart">Heart</button>
+            <button type="button" class="btn btn-secondary injury-btn" data-injury="Lung">Lung</button>
+            <button type="button" class="btn btn-secondary injury-btn" data-injury="Neck">Neck</button>
+            <button type="button" class="btn btn-secondary injury-btn" data-injury="Stomach">Stomach</button>
+            <button type="button" class="btn btn-secondary injury-btn" data-injury="Bone or Muscle">Bone or Muscle</button>
+            <button type="button" class="btn btn-secondary injury-btn" data-injury="Burn or Cut">Burn or Cut</button>
+          </div>
+          <input type="hidden" id="injury_type" name="injury_type" required />
+          <span class="helper">Tap one of the options above.</span>
+        </div>
+
+        <div class="form-row">
+          <label>Pain Level (1–10)</label>
+          <div class="pain-row" id="pain-row">
+            <!-- 1–10 buttons -->
+          </div>
+          <input type="hidden" id="pain_level" name="pain_level" required />
+          <span class="helper">1 = very mild, 10 = worst pain imaginable.</span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <p id="patient-message" class="helper" style="margin-top: 10px;"></p>
+      </form>
+    </section>
+
+    <div class="nav-links">
+      <a href="index.html">Back to Home</a>
+    </div>
+  </main>
+
+  <script src="patient.js"></script>
+</body>
+</html>

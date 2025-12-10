@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hospital Triage App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+
+    <!-- Hero section -->
+    <section class="hero card">
+      <div class="hero-text">
+        <h1 class="page-title">Hospital Triage App</h1>
+        <p class="page-subtitle hero-subtitle">
+          A simple tool to help emergency staff organize patients by urgency and
+          help patients understand their expected wait time.
+        </p>
+    </section>
+
+    <!-- Role selection cards -->
+    <section class="role-section">
+      <h2 class="section-title">Choose how you want to continue</h2>
+      <p class="section-subtitle">
+        Select your role below. You can switch between Patient and Triage Staff at any time.
+      </p>
+
+      <div class="role-grid">
+
+        <!-- Patient card -->
+        <article class="role-card">
+          <h3 class="role-title">I am a Patient</h3>
+          <p class="role-text">
+            Answer a few quick questions about your injury and pain level so the
+            triage staff can place you in the queue and estimate your wait time.
+          </p>
+          <ul class="role-list">
+            <li>Select injury type and pain level</li>
+            <li>Submit a triage entry in under a minute</li>
+            <li>Information is visible only to hospital staff</li>
+          </ul>
+          <a href="patient.html" class="role-button-link">
+            <button class="btn btn-primary role-btn">Continue as Patient</button>
+          </a>
+        </article>
+
+        <!-- Admin card -->
+        <article class="role-card">
+          <h3 class="role-title">I am Triage Staff (Admin)</h3>
+          <p class="role-text">
+            View the full patient queue, assign room and priority levels, and 
+            keep the waiting room informed as patients are treated.
+          </p>
+          <ul class="role-list">
+            <li>See all patients ordered by priority &amp; arrival</li>
+            <li>Update triage level and assign rooms</li>
+            <li>Remove patients once treatment is complete</li>
+          </ul>
+          <a href="admin.html" class="role-button-link">
+            <button class="btn btn-secondary role-btn">Continue as Admin</button>
+          </a>
+        </article>
+
+      </div>
+    </section>
+  </main>
+</body>
+</html>
